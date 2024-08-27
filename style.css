@@ -1,0 +1,197 @@
+:root {
+  --color-primario: #f3f5fc;
+  --color-secundario: #0a3871;
+}
+* {
+  background: var(--color-primario);
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin-top: 0;
+}
+header {
+  width: 100%;
+  text-align: left;
+}
+.logo {
+  padding-top: 40px;
+  padding-left: 40px;
+  width: 8%;
+}
+main {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  width: 80%;
+  margin-bottom: 10px;
+  margin-left: 180px;
+}
+.seccion-entrada,
+.seccion-salida {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 600px;
+}
+
+.text-area,
+.contenedor-salida {
+  width: 100%;
+  max-width: 90%;
+  border: none;
+  border-radius: 24px;
+  padding: 15px;
+  font-size: 2em;
+  margin-bottom: 20px;
+  resize: none;
+  outline: none;
+}
+.text-area {
+  color: var(--color-secundario);
+  text-transform: lowercase;
+}
+::placeholder {
+  color: var(--color-secundario);
+  text-transform: none;
+}
+.mensaje {
+  background-color: #ffffff;
+  resize: none;
+  outline: none;
+  width: 100%;
+  border: none;
+  margin-bottom: 15px;
+}
+.no-found,
+.texto-no-found,
+.apoyo-not-found {
+  opacity: 1; /* Mostrar elementos por defecto */
+  transition: opacity 0.3s ease; /* Añade una transición suave */
+}
+.no-found {
+  background-color: #ffffff;
+  max-width: 70%;
+  height: auto;
+  margin-bottom: 20px;
+}
+p {
+  text-align: center;
+  background-color: transparent;
+}
+.contenedor-salida {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #ffffff;
+  justify-content: center;
+  background-size: 70%;
+  color: var(--color-secundario);
+  width: 70%;
+  min-height: 600px; /* Establecer una altura mínima para mantener la proporción */
+  padding: 20px;
+  margin-bottom: 20px;
+  align-content: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contenedor-error {
+  display: flex; /* Flexbox para alinear ícono y texto en fila */
+  align-items: center; /* Centra verticalmente los elementos */
+  gap: 8px; /* Añade un espacio entre el ícono y el texto */
+  max-width: 100%; /* Ajusta el ancho máximo del contenedor */
+  margin-top: 10px; /* Espacio adicional arriba del contenedor */
+}
+
+.contenedor-error img {
+  flex-shrink: 0; /* Evita que el ícono se reduzca */
+}
+
+.contenedor-error p {
+  margin: 0; /* Elimina cualquier margen predeterminado del párrafo */
+  white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+}
+
+.informacion {
+  color: #495057;
+  font-size: 14px;
+  text-align: left;
+  width: 100%;
+}
+.botones {
+  display: flex;
+  margin-top: 18px;
+  gap: 15px;
+  cursor: pointer;
+}
+.btn-encriptar {
+  background-color: var(--color-secundario);
+  border: 1px solid var(--color-secundario);
+  border-radius: 24px;
+  color: #ffffff;
+  cursor: pointer;
+  height: 67px;
+  margin-left: 30px;
+  width: 328px;
+}
+.btn-desencriptar {
+  background-color: #d8dfe8;
+  border: 1px solid var(--color-secundario);
+  border-radius: 24px;
+  color: var(--color-secundario);
+  cursor: pointer;
+  height: 67px;
+  margin-left: 30px;
+  width: 328px;
+}
+.btn-salida {
+  display: flex;
+  margin-top: 30px;
+  background-color: transparent;
+}
+.texto-no-found {
+  font-weight: bold;
+  font-size: 1em;
+}
+.apoyo-not-found {
+  font-size: 0.5em;
+}
+.btn-copiar {
+  background-color: var(--color-secundario);
+  border: 1px solid var(--color-secundario);
+  border-radius: 24px;
+  color: #ffffff;
+  cursor: pointer;
+  height: 67px;
+  margin-left: 30px;
+  width: 328px;
+}
+footer {
+  text-align: center; /* Centra el texto horizontalmente */
+  padding: 20px 0; /* Añade espacio alrededor del texto */
+  background-color: var(
+    --color-primario
+  ); /* Ajusta el color de fondo si es necesario */
+  font-size: 1em; /* Ajusta el tamaño de la fuente */
+  color: var(--color-secundario); /* Color del texto */
+  position: relative; /* Asegura que el footer se comporte correctamente dentro del flujo de la página */
+  width: 100%; /* Asegura que el footer ocupe todo el ancho */
+}
+.error {
+  color: red;
+  font-weight: bold;
+}
+.mensaje-error {
+  color: red; /* Cambia el color del texto a rojo cuando es un mensaje de error */
+}

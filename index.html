@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Encriptador de texto</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <img class="logo" src="assets/Logo.png" alt="Logo-alura" />
+    </header>
+    <main>
+      <section class="seccion-entrada">
+        <textarea
+          class="text-area"
+          cols="30"
+          rows="10"
+          placeholder="Ingrese el texto aqui"
+        ></textarea>
+        <div class="contenedor-error">
+          <h6 class="informacion">Solo letras minúsculas y sin acento</h6>
+        </div>
+        <div class="botones">
+          <button class="btn-encriptar" onclick="encriptarTexto();">
+            Encriptar
+          </button>
+          <button class="btn-desencriptar" onclick="desencriptarTexto();">
+            Desencriptar
+          </button>
+        </div>
+      </section>
+      <section class="seccion-salida">
+        <div class="contenedor-salida">
+          <textarea class="mensaje" cols="20" rows="10" readonly></textarea>
+          <img class="no-found" src="assets/Muñeco.png" alt="Sin mensaje" />
+          <p class="texto-no-found">Ningún mensaje fue encriptado</p>
+          <p class="apoyo-not-found">
+            Ingresa el texto que deseas encriptar o desencriptar.
+          </p>
+          <div class="btn-salida">
+            <button
+              class="btn-copiar"
+              onclick="copiarTexto();"
+              style="display: none"
+            >
+              Copiar
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>Produced by Rodrigo Morales</p>
+    </footer>
+    <script src="app.js"></script>
+  </body>
+</html>
